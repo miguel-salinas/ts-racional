@@ -21,8 +21,8 @@ namespace numeros {
                 this.d=d;
             }
         }
-
-        //funcion de clase
+// Graciela Mendez Caro Push
+        //funcion de clase  
         static suma(r1: Racional, r2:Racional): Racional {
             var rr: Racional;
             var nr,dr:number;
