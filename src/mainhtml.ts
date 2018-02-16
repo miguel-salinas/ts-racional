@@ -30,7 +30,7 @@ function procesa(oper:any) { // el parametro de entrada viene de submit
 
     }
     else {
-        console.log("No toma la forma o los elementos!!")
+        console.log("No toma la forma o los elementos, hay que arreglarlo!!!")
     }
 
     r1= new numeros.Racional(Number(sn1), Number(sd1));
