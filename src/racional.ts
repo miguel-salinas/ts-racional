@@ -1,6 +1,6 @@
 namespace numeros {
 
-    export class Racional {
+    export class Racional {  //Graciela Mendez
         // Atrbutos
         n: number; // numerador
         d: number; // denominador
