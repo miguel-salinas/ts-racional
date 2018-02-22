@@ -36,9 +36,29 @@ function procesa(oper:any) { // el parametro de entrada viene de submit
     r1= new numeros.Racional(Number(sn1), Number(sd1));
     r2= new numeros.Racional(Number(sn2), Number(sd2));
     
-    if (soper.localeCompare("+")==0) { //Suma
-        //alert("dentro suma");
-        rr= numeros.Racional.suma(r1,r2);
+    var operacion = <string> oper;
+
+    switch (operacion){
+        case "+":
+        {
+            rr= numeros.Racional.suma(r1,r2);
+            rr.reducir();
+        }
+        case "-":
+        {
+            rr= numeros.Racional.resta(r1,r2);
+            rr.reducir();
+        }
+        case "*":
+        {
+            rr= numeros.Racional.multiplicacion(r1,r2);
+            rr.reducir();
+        }
+        case "/":
+        {
+            rr= numeros.Racional.division(r1,r2);
+            rr.reducir();
+        }
     }
 
     r1.dispHtml();
