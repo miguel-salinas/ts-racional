@@ -91,6 +91,39 @@ namespace numeros {
             return;
         }
 
+        // metodo de simplicacion por Elizabeth Montoya
+        
+        simplicacion():Racional{
+            var rr: Racional;
+            var nr,dr,i,menor,multiplo,hay_multiplicacion:number;
+            nr=this.n;
+            dr=this.d;
+
+            do{
+                if(nr<dr){
+                    menor=nr;
+                }else
+                  menor=dr;
+            
+                i=2;
+                hay_multiplicacion=0;
+
+                while(i<=menor&&hay_multiplicacion==0){
+                    if(nr%i==0&&dr%i==0){           
+                        multiplo=i;
+                        hay_multiplicacion=1;
+                    }i++;
+                }
+                if(hay_multiplicacion==1){
+                    nr=nr/multiplo;
+                    dr=dr/multiplo;      
+                }
+            } while(hay_multiplicacion==1)
+
+            rr=new Racional(nr,dr);
+            return rr;
+        }
+
         // hacer las funciones de resta, mult, div
         // hacer la funcion reducir
 
